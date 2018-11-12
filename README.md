@@ -17,7 +17,7 @@ Este proyecto parte como continuación a [el proyecto de compra/reserva de ticke
 
 ## Parte I.
 
-Para las partes I y II, usted va a implementar una herramienta que permita integrarse al proyecto de [el proyecto de compra/reserva de tickets](https://github.com/ARSW-ECI-beta/REST_CLIENT-SpringBoot-Cinema_Part2),, basada en el siguiente diagrama de actividades:
+Para las partes I y II, usted va a implementar una herramienta que permita integrarse al proyecto de [el proyecto de compra/reserva de tickets](https://github.com/ARSW-ECI-beta/REST_CLIENT-SpringBoot-Cinema_Part2), basada en el siguiente diagrama de actividades:
 
 ![](img/Activity.png)
 
