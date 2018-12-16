@@ -1,11 +1,13 @@
 
+
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
-### Laboratorio - Broker de Mensajes STOMP con WebSockets + HTML5 Canvas. 
-### Caso: Cinema bookings
+## Laboratorio - Broker de Mensajes STOMP con WebSockets + HTML5 Canvas. - Caso: Reserva de Boletos de Cine
 
-		
+### Dependencias
+* [Laboratorio - Construción de un cliente 'grueso' con un API REST, HTML5, Javascript y CSS3. Parte II. - Caso Cinema](https://github.com/ARSW-ECI-beta/REST_CLIENT-SpringBoot-Cinema_Part2)		
 
+### Descripción
 Este ejercicio se basa en la documentación oficial de SpringBoot, para el [manejo de WebSockets con STOMP](https://spring.io/guides/gs/messaging-stomp-websocket/).
 
 En este repositorio se encuentra una aplicación SpringBoot que está configurado como Broker de mensajes, de forma similar a lo mostrado en la siguiente figura:
@@ -15,7 +17,7 @@ En este repositorio se encuentra una aplicación SpringBoot que está configurad
 En este caso, el manejador de mensajes asociado a "/app" aún no está configurado, pero sí lo está el broker '/topic'. Como mensaje, se usarán localizaciones de pantalla, pues se espera que esta aplicación permita propagar eventos de compra de asientos seleccionando en el canvas el asiento deseado.
 Este proyecto parte como continuación a [el proyecto de compra/reserva de tickets](https://github.com/ARSW-ECI-beta/REST_CLIENT-SpringBoot-Cinema_Part2),
 
-## Parte I.
+### Parte I.
 
 Para las partes I y II, usted va a implementar una herramienta que permita integrarse al proyecto de [el proyecto de compra/reserva de tickets](https://github.com/ARSW-ECI-beta/REST_CLIENT-SpringBoot-Cinema_Part2), basada en el siguiente diagrama de actividades:
 
@@ -51,7 +53,7 @@ Para esto, realice lo siguiente:
 	```
 
 
-## Parte II.
+### Parte II.
 
 Para hacer mas útil la aplicación, en lugar de capturar las coordenadas con campos de formulario, las va a capturar a través de eventos sobre el elemento de tipo \<canvas>. De la misma manera, en lugar de simplemente mostrar las coordenadas enviadas en los eventos a través de 'alertas', va a cambiar el color de dichos asientos en el canvas simulando la compra de los mismos.
 
@@ -71,7 +73,7 @@ Para hacer mas útil la aplicación, en lugar de capturar las coordenadas con ca
 	git commit -m "PARTE 2".
 	```
 
-## Parte III.
+### Parte III.
 
 Ajuste la aplicación anterior para que pueda manejar la compra de asientos en más de una sala a la vez, manteniendo tópicos independientes. Para esto:
 
@@ -86,7 +88,7 @@ Ajuste la aplicación anterior para que pueda manejar la compra de asientos en m
 	```
 
 
-## Parte IV.
+### Parte IV.
 
 Para la parte IV, usted va  a implementar una versión extendida del modelo de actividades y eventos anterior, en la que el servidor (que hasta ahora sólo fungía como Broker o MOM -Message Oriented Middleware-) se volverá también suscriptor de ciertos eventos, para a partir de los mismos agregar la funcionalidad de 'compra/reserva de entradas de cine':
 
@@ -138,12 +140,4 @@ Por esta razón a partir de ahora se hará una integración con el [proyecto de 
 	```bash
 	git commit -m "PARTE FINAL".
 	```	
-
-
-
-### Criterios de evaluación
-
-1. La aplicación propaga correctamente los asientos entre todas las instancias abierta de la misma, cuando hay sólo una sala.
-2. La aplicación propaga correctamente los asientos entre todas las instancias abierta de la misma, cuando hay más de una sala.
-3. En la implementación se tuvo en cuenta la naturaleza concurrente del ejercicio. Por ejemplo, si se mantiene el conjunto de las salas y sus asientos recibidos en una colección, la misma debería ser de tipo concurrente (thread-safe).
 
